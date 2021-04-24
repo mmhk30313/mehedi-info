@@ -1,38 +1,80 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: #282c34 !important;
+}
+.sidebar {
+  height: 100%;
+  /* width: 0; */
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-link a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none !important;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+.my-link a:focus{
+  border-bottom: 2px solid palevioletred !important;
+}
+.my-link a:hover {
+  color: #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* .openBtn {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #111;
   color: white;
+  padding: 10px 15px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.openBtn:hover {
+  background-color: #444;
+} */
+
+#name2{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#main, .mobile {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 230px;
+}
+.mobile{
+  display: none;
+}
+@media (max-width: 769px){
+  #main{
+    border-top: 2px solid wheat;
   }
-  to {
-    transform: rotate(360deg);
+  .mobile{
+    display: block;
   }
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }

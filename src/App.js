@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+import WhatsAppWidget from 'react-whatsapp-widget';
+import Navigation from './Components/Navigation/Navigation';
+// import 'react-whatsapp-widget/dist/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
+  
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation/>
+        
+            {/* <MessengerCustomerChat pageId="109101847984556" appId="481173423298646" />
+            <WhatsAppWidget textReplyTime='Typically replies within a day' phoneNumber='+8801521108858' companyName="Md. Mehedi Hasan Khan" message="Hello! 👋🏼 What can I do for you?" sendButton="Send" /> */}
     </div>
   );
 }
