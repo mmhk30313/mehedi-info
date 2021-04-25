@@ -1,80 +1,102 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
 .App {
   /* text-align: center; */
-  background-color: #282c34 !important;
+  /* background-color: #282c34 !important; */
+  background-color: #111 !important;
 }
-.sidebar {
+.sidebar-mobile, .sidebar-desktop {
   height: 100%;
   /* width: 0; */
-  width: 230px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.8s;
   padding-top: 60px;
 }
-
+.sidebar-desktop{
+  width: 250px;
+  border-right: 0.1px solid rgb(150, 149, 149);
+}
+#main-desktop{
+  /* padding: 10px; */
+  margin-left: 250px;
+}
 .my-link a {
   padding: 8px 8px 8px 32px;
-  text-decoration: none !important;
   font-size: 18px;
   color: #818181;
   display: block;
   transition: 0.3s;
-
+  
 }
-.my-link a:focus{
+/* .my-link a:focus{
   border-bottom: 2px solid palevioletred !important;
-}
-.my-link a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* .openBtn {
-  font-size: 24px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openBtn:hover {
-  background-color: #444;
 } */
+.nav-link a:hover, .nav-link a:focus
+{
+  background-color: rgb(196, 55, 55);
+  color: #ffe284 !important;
+  text-decoration: palevioletred !important;
+}
 
 #name2{
   display: none;
 }
-
-#main, .mobile {
-  transition: margin-left .5s;
-  padding: 16px;
-  margin-left: 230px;
-}
-.mobile{
+.sidebar-mobile{
   display: none;
 }
+#topBar{
+  border-bottom: 0.1px solid rgb(150, 149, 149);
+}
+#main-mobile, #topBar {
+  transition: margin-left 0.8s;
+  padding: 10px;
+  display: none;
+}
+/* #topBar{
+  display: none;
+  border-bottom: 2px solid wheat !important;
+} */
+/* .closebtn{
+  display: none !important;
+} */
 @media (max-width: 769px){
-  #main{
-    border-top: 2px solid wheat;
-  }
-  .mobile{
+  #main-mobile{
     display: block;
+    padding: 10px;
+    margin-left: 200px;
+    /* margin-top: 160px; */
+    margin-left: 0;
+  }
+  .sidebar-desktop, #main-desktop{
+    display: none;
+  }
+  .sidebar-mobile{
+    width: 0;
+    display: block;
+  }
+  #topBar{
+    display: block;
+    margin-left: 0;
+  }
+
+  .closebtn{
+    display: block !important;
   }
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar-mobile {padding-top: 15px;}
+  .sidebar-mobile a {font-size: 18px;}
 }
