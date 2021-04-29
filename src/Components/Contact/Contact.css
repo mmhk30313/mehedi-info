@@ -1,0 +1,17 @@
+.home-form input:focus, .home-form textarea:focus{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.home-form input, .home-form textarea{
+    background-color: transparent;
+    outline: blueviolet;
+    border: 1px solid blueviolet;
+    /* padding: 0 205px;
+    margin: 30px 0 0 0; */
+}
+@media (max-width: 760px){
+    .home-form{
+        padding: 0 !important;
+    }
+}

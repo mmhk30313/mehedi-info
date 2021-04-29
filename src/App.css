@@ -3,7 +3,10 @@ body{
   margin: 0;
   box-sizing: border-box;
 }
-body::-webkit-scrollbar{
+.client-description{
+  overflow: scroll;
+}
+body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
   display: none;
 }
 .App {
@@ -26,28 +29,32 @@ body::-webkit-scrollbar{
 }
 .sidebar-desktop{
   width: 250px;
-  border-right: 0.1px solid rgb(150, 149, 149);
+  overflow: hidden;
+  /* border-right: 0.1px solid rgb(150, 149, 149); */
 }
 #main-desktop{
   /* padding: 10px; */
   margin-left: 250px;
 }
-.my-link a {
+/* .my-link a {
   padding: 8px 8px 8px 32px;
   font-size: 18px;
   color: #818181;
   display: block;
   transition: 0.3s;
   
-}
+} */
 /* .my-link a:focus{
   border-bottom: 2px solid palevioletred !important;
 } */
-.nav-link a:hover, .nav-link a:focus
+.nav-link a{
+  font-size: 20px;
+}
+.nav-link a:hover
 {
-  background-color: rgb(196, 55, 55);
+  /* background-color: rgb(124, 105, 105); */
   color: #ffe284 !important;
-  text-decoration: palevioletred !important;
+  text-decoration: underline palevioletred !important;
 }
 
 #name2{
@@ -56,12 +63,12 @@ body::-webkit-scrollbar{
 .sidebar-mobile{
   display: none;
 }
-#topBar{
-  border-bottom: 0.1px solid rgb(150, 149, 149);
-}
+/* #topBar{
+  /* border-bottom: 0.1px solid rgb(150, 149, 149);
+} */
 #main-mobile, #topBar {
   transition: margin-left 0.8s;
-  padding: 10px;
+  /* padding: 10px; */
   display: none;
 }
 /* #topBar{
@@ -74,7 +81,7 @@ body::-webkit-scrollbar{
 @media (max-width: 769px){
   #main-mobile{
     display: block;
-    padding: 10px;
+    /* padding: 10px; */
     margin-left: 200px;
     /* margin-top: 160px; */
     margin-left: 0;
@@ -88,11 +95,11 @@ body::-webkit-scrollbar{
   }
   #topBar{
     display: block;
-    margin-left: 0;
+    margin: 0 0;
+    padding: 10px 0;
   }
-
-  .closebtn{
-    display: block !important;
+  .nav-link a{
+    font-size: 16px;
   }
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import WhatsAppWidget from 'react-whatsapp-widget';
@@ -11,6 +10,9 @@ import Navigation from './Components/Navigation/Navigation';
 // import 'react-whatsapp-widget/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createContext, useState } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+AOS.init();
 export const UserContext = createContext();
 function App() {
     const [admin, setAdmin] = useState({});
