@@ -19,7 +19,7 @@ const Testimonials = () => {
     },[])
     console.log(clientReviews);
     return (
-        <div style={{height: '100vh'}} className="container py-4 pb-5">
+        <div style={{height: ''}} className="container py-4 pb-5">
             <h3 className='text-center color-brand font-weight-bold my-3 header'>Testimonials</h3>
             <Carousel
                 // additionalTransfrom={0}
@@ -73,14 +73,61 @@ const Testimonials = () => {
 
                 // End Test
 
+                // additionalTransfrom={0}
+                // // arrows
+                // arrows={false}
+                // autoPlay
+                // autoPlaySpeed={3000}
+                // centerMode={false}
+                // className=""
+                // containerClass="container-with-dots"
+                // dotListClass=""
+                // draggable
+                // focusOnSelect={false}
+                // infinite
+                // itemClass=""
+                // keyBoardControl
+                // minimumTouchDrag={80}
+                // renderButtonGroupOutside={false}
+                // renderDotsOutside={false}
+                // responsive={{
+                //     desktop: {
+                //     breakpoint: {
+                //         max: 3000,
+                //         min: 1024
+                //     },
+                //     items: 3,
+                //     partialVisibilityGutter: 40
+                //     },
+                //     mobile: {
+                //     breakpoint: {
+                //         max: 464,
+                //         min: 0
+                //     },
+                //     items: 1,
+                //     partialVisibilityGutter: 30
+                //     },
+                //     tablet: {
+                //     breakpoint: {
+                //         max: 1024,
+                //         min: 464
+                //     },
+                //     items: 2,
+                //     partialVisibilityGutter: 30
+                //     }
+                // }}
+                // showDots
+                // sliderClass=""
+                // slidesToSlide={2}
+                // swipeable
+
+                // End point
                 additionalTransfrom={0}
-                // arrows
                 arrows={false}
-                autoPlay
                 autoPlaySpeed={3000}
                 centerMode={false}
                 className=""
-                containerClass="container-with-dots"
+                containerClass="container"
                 dotListClass=""
                 draggable
                 focusOnSelect={false}
@@ -96,34 +143,33 @@ const Testimonials = () => {
                         max: 3000,
                         min: 1024
                     },
-                    items: 3,
-                    partialVisibilityGutter: 40
+                    items: 1
                     },
                     mobile: {
                     breakpoint: {
                         max: 464,
                         min: 0
                     },
-                    items: 1,
-                    partialVisibilityGutter: 30
+                    items: 1
                     },
                     tablet: {
                     breakpoint: {
                         max: 1024,
                         min: 464
                     },
-                    items: 2,
-                    partialVisibilityGutter: 30
+                    items: 1
                     }
                 }}
                 showDots
                 sliderClass=""
-                slidesToSlide={2}
+                slidesToSlide={1}
                 swipeable
-                >
+            >
                {
                    clientReviews.length > 0 
                    && clientReviews.map((clientReview) => <WithStyles key={clientReview._id} review={clientReview}/>)
+                //    clientReviews.length > 0 
+                //    && clientReviews.map((clientReview) => <WithStyles key={clientReview._id} review={clientReview}/>)
                }
                
             </Carousel>

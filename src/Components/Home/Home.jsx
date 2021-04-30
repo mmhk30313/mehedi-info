@@ -24,9 +24,18 @@ const Home = () => {
                         <a style={{width: 'fit-content', height: 'fit-content'}} href="#cv" className="my-1  btn btn-primary" rel="noreferrer" >RESUME</a>
 
                     </div>
-                    <div className="col-md-4 d-flex ">
-                        <a style={{width: '108px', height: 'fit-content'}} href="#contact" className="my-1 btn btn-outline-warning" rel="noreferrer" >HIRE ME</a>
+                    <div id="contact-desktop" className="col-md-5 contact-desktop ml-2 d-flex ">
+                        <a style={{width: '108px', height: 'fit-content'}} href="#contact-1" className="my-1 btn btn-outline-warning" rel="noreferrer" >HIRE ME</a>
                     </div>
+                    <div id="contact-mobile" className="col-md-4 d-flex ">
+                        <a style={{width: '108px', height: 'fit-content'}} href="#contact-2" className="my-1 btn btn-outline-warning" rel="noreferrer" >HIRE ME</a>
+                    </div>
+                    <div id="contact-desktop" className="col-md-8 d-flex justify-content-center ">
+                        <a id="down" href="#about-1" style={{height: '50px'}} className="my-3 mx-auto  rounded border border-primary text-decoration-none" rel="noreferrer" ><p className="down">.</p></a>
+                    </div>
+                    {/* <div id="contact-mobile" className="col-md-8 d-flex justify-content-center">
+                        <a href="#about-2" style={{width: 'fit-content'}} className="my-1 mx-auto btn btn-outline-warning" rel="noreferrer" ><span className="down">.</span></a>
+                    </div> */}
                 </div>
             </div>
         </div>

@@ -41,7 +41,7 @@ const Contact = () => {
     }
     return (
         <div className="container py-4 pb-5">
-            <h3  className="py-4 header">CONTACT</h3>
+            <h3  className="py-4 mt-5 header">CONTACT</h3>
             
             <h6 className="header pb-3">Let us handle your project, professionally</h6>
             <form onSubmit={handleSubmit} className="bg-transparent home-form">
@@ -61,8 +61,8 @@ const Contact = () => {
                     <div className="col-md-12 form-group">
                         <textarea type="text" cols='15' rows="5" name="message" placeholder="Your Message" className="form-control" required/>
                     </div>
-                    <div className="form-group d-flex justify-content-center">
-                        <input type="submit" className="btn btn-outline-warning" value="Send Message"/>
+                    <div className="container form-group w-100 d-flex justify-content-center">
+                        <button type="submit" className="w-100 mx-auto btn btn-outline-warning" value="">Send Message</button>
                     </div>
                 </div>
             </form>

@@ -65,7 +65,7 @@ const Navigation = () => {
                     <a onClick={() => closeNav()}href="#projects-2" className="py-1 bd-highlight text-decoration-none text-light">Projects</a>
                     <a onClick={() => closeNav()} href="#blogs-2" className="py-1 bd-highlight text-decoration-none text-light">Blogs</a>
                     <a onClick={() => closeNav()}href="#testimonials-2" className="py-1 bd-highlight text-decoration-none text-light">Testimonials</a>
-                    <a onClick={() => closeNav()} href="#contact-1" className="py-1 bd-highlight text-decoration-none text-light">Contact</a>
+                    <a onClick={() => closeNav()} href="#contact-2" className="py-1 bd-highlight text-decoration-none text-light">Contact</a>
                 </div>
                 <div className="d-flex flex-row justify-content-between px-3 mt-4">
                     <a style={{fontSize: '14px'}} href="https://www.facebook.com/MMHK30313" className="text-decoration-none text-light social-link" rel="noreferrer"><FaFacebookF/></a>
@@ -114,7 +114,7 @@ const Navigation = () => {
                     <Testimonials/>
                 </div>
                 <div id="contact-2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, culpa cupiditate. Ipsa dolorem nisi inventore dolorum, harum ab consequatur facilis repudiandae! Aliquam quaerat nihil perferendis, consequuntur perspiciatis consequatur dicta autem ullam laudantium dignissimos qui repudiandae laborum mollitia, repellat fuga! A impedit alias recusandae quod inventore veritatis at ut. Qui voluptatem, beatae facere est tempore deleniti commodi? Ad, saepe at voluptates debitis porro itaque voluptate dignissimos esse quia illo nulla quos repellat natus. Minus error fuga a libero omnis doloribus perferendis eos architecto eligendi culpa. Eum voluptates corporis dicta veniam? Impedit nam voluptate asperiores quasi iure itaque, ad ratione reprehenderit possimus?</p>
+                    <Contact/>
                 </div>
             </div>
             <div id="main-desktop" className="text-light border-none" >

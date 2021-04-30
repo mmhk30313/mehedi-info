@@ -71,6 +71,9 @@ body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
   /* padding: 10px; */
   display: none;
 }
+#contact-mobile{
+  display: none !important;
+}
 /* #topBar{
   display: none;
   border-bottom: 2px solid wheat !important;
@@ -78,6 +81,23 @@ body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
 /* .closebtn{
   display: none !important;
 } */
+.down{
+  /* animation: float infinite ease-in-out; */
+  width: 10px;
+  margin:  0 auto;
+  font-size: 30px;
+  font-weight: bolder;
+  animation: float 1s ease-in-out infinite !important;
+}
+#down{
+  width: 30px;
+}
+@keyframes float{
+  0% { transform: translate(0,  0); }
+  50%  { transform: translate(0, 15px); }
+    /* 75%  { transform: translate(9px, 7px); } */
+  100%   { transform: translate(0, -9px); } 
+}
 @media (max-width: 769px){
   #main-mobile{
     display: block;
@@ -86,8 +106,11 @@ body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
     /* margin-top: 160px; */
     margin-left: 0;
   }
-  .sidebar-desktop, #main-desktop{
-    display: none;
+  .sidebar-desktop, #main-desktop, #contact-desktop{
+    display: none !important;
+  }
+  #contact-mobile{
+    display: block !important;
   }
   .sidebar-mobile{
     width: 0;
