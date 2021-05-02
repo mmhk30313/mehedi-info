@@ -7,24 +7,22 @@ import Modal from 'react-bootstrap/Modal';
 const Contact = () => {
     const [modalShow, setModalShow] = useState(false);
     // const [loggedInUser] = useContext(UserContext);
-    const [wrongMessage, setWrongMessage] = useState(false);
     const [user, setUser] = useState({});
     const handleSubmit = (evt)=>{
         evt.preventDefault();
         // console.log(evt.target)
         const curUser = {
-            from_name: evt.target.first_name.value + " " + evt.target.last_name.value,
-            reply_to: evt.target.email.value,
+            from_name: evt.target.from_name.value + " " + evt.target.last_name.value,
+            reply_to: evt.target.reply_to.value,
             phone: evt.target.phone.value,
             message: evt.target.message.value
         }
-        // console.log(user);
+        console.log(curUser);
         emailjs.sendForm('itsforyou', 'template_esocsya', evt.target, 'user_z1NIIg9IrX3DIJgTQOSDK')
         .then((result) => {
             // console.log(result.text);
             if(result.text === "OK"){
                 // .....MODAL Bootstrap......
-                setWrongMessage(false)
                 setUser(curUser);
                 setModalShow(true);
             }
@@ -40,10 +38,10 @@ const Contact = () => {
         evt.target.reset()
     }
     return (
-        <div className="container py-4 pb-5">
-            <h3  className="py-4 mt-5 header">CONTACT</h3>
+        <div  className="container py-5 contact">
+            <h3 className="font-weight-bold header mt-4 py-3">CONTACT</h3>
             
-            <h6 className="header pb-3">Let us handle your project, professionally</h6>
+            <p className="header pb-3">Let us handle your project, professionally</p>
             <form onSubmit={handleSubmit} className="bg-transparent home-form">
                 <div className="row justify-content-center">
                     <div className="col-md-6 form-group">
@@ -67,7 +65,6 @@ const Contact = () => {
                 </div>
             </form>
             <MyVerticallyCenteredModal
-                wrongMessage={wrongMessage}
                 user={user}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
@@ -79,7 +76,7 @@ const Contact = () => {
 export default Contact;
 
 function MyVerticallyCenteredModal(props) {
-    const {user, wrongMessage} = props;
+    // const {user} = props;
     return (
       <Modal
         {...props}
@@ -88,8 +85,8 @@ function MyVerticallyCenteredModal(props) {
         centered
         
       >
-        <Modal.Header className="bg-dark btn-close-white" closeButton>
-            <Modal.Body className="bg-dark text-center py-3">
+        <Modal.Header className="bg-light btn-close-white" closeButton>
+            <Modal.Body className="text-center py-3">
             <div className="w-100 mx-auto pt-4">
                 <div className="">
                     <p className="text-center text-success">Thanks for your  mail. I will response as soon as possible.</p>

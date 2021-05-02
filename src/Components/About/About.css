@@ -19,7 +19,7 @@
 .about-des{
     /* font-family: 'Courier New', monospace; */
     font-family: Garamond, serif;
-    font-size: 22px;
+    font-size: 20px;
     /* text-align: justify; */
     color: thistle;
     /* font-weight: lighter !important; */
@@ -33,11 +33,18 @@
         width: 0;
     }
 } */
-.responsive, .fast, .dynamic{
+/* .responsive, .fast, .dynamic{
     height: 235px;
     overflow: scroll;
 }
 .responsive::-webkit-scrollbar, .fast::-webkit-scrollbar, .dynamic::-webkit-scrollbar{
+    display: none;
+} */
+.about-des{
+    height: 80px;
+    overflow: scroll;
+}
+.about-des::-webkit-scrollbar{
     display: none;
 }
 .about-experience .card .title{

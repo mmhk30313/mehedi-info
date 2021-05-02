@@ -10,8 +10,14 @@
     /* padding: 0 205px;
     margin: 30px 0 0 0; */
 }
-@media (max-width: 760px){
+.home-form{
+    margin-top: 30px;
+    height: 495px;
+    
+}
+@media (max-width: 769px){
     .home-form{
+        height: fit-content !important;
         padding: 0 !important;
     }
 }

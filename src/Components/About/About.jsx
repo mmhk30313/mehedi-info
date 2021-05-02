@@ -14,8 +14,8 @@ const colors = {
 }
 const About = () => {
     return (
-        <div className="container pt-4 pb-4 about">
-            <h3 className="my-4 header">ABOUT</h3>
+        <div className="container py-5 about">
+            <h3 className="font-weight-bold my-4 header">ABOUT</h3>
             <div className="row py-2 about-experience">
                 <div className="col-md-4">
                     <div  className="card bg-transparent responsive">
@@ -99,7 +99,7 @@ const About = () => {
                         }
                         
                     ].map(skill => <div key={skill._id} className="col-md-6">
-                        <div style={{height: '115px'}} className="card bg-transparent py-3 skill">
+                        <div style={{height: '110px'}} className="card bg-transparent py-2 skill">
                             <div className="text-warning d-flex justify-content-between">
                                 <p style={{fontSize: '14px'}}>{skill.name}</p>
                                 <p style={{fontSize: '14px'}}>{skill.percent}{"%"}</p>

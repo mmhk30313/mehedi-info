@@ -6,6 +6,12 @@
 .info{
     width: 450px;
 }
+@media(max-width: 1025px){
+    .home{
+        height: fit-content;
+        padding: 180px 0;
+    }
+}
 @media (max-width: 769px){
     .home{
         height: fit-content;
@@ -13,7 +19,7 @@
     }
     .info{
         width: fit-content;
-        height: 300px;
+        height: fit-content;
         overflow: scroll;
     }
     .name, .typeWriting{
@@ -27,4 +33,12 @@
     }
     /* @media only screen and (max-width: 140px) {
     } */
+    /* Testimonials */
+
+    .des{
+        /* width: 92%; */
+        height: 150px;
+        /* margin: 5px; */
+        font-size: 14px;
+    }
 }

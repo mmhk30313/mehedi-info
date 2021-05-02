@@ -7,124 +7,23 @@ import 'react-multi-carousel/lib/styles.css';
 import WithStyles from './WithStyles';
 
 const Testimonials = () => {
-    const [clientReviews, setClientReviews] = useState([]);
+    const [clients, setClients] = useState({});
     useEffect(() => {
-        fetch("https://travel-solution-server.herokuapp.com/all-reviews")
+        fetch("https://my-all-works-server.herokuapp.com/client-reviews")
         .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            setClientReviews(data);
-        })
+        .then(data => setClients(data))
         .catch(err => console.log(err))
     },[])
-    console.log(clientReviews);
+    // console.log(clientReviews);
     return (
-        <div style={{height: ''}} className="container py-4 pb-5">
-            <h3 className='text-center color-brand font-weight-bold my-3 header'>Testimonials</h3>
+        <div style={{height: ''}} className="container py-5 ">
+            <h3 className='font-weight-bold mt-4  header'>TESTIMONIALS</h3>
             <Carousel
-                // additionalTransfrom={0}
-                // arrows={false}
-                // autoPlay
-                // autoPlaySpeed={3000}
-                // centerMode={false}
-                // className=""
-                // containerClass="container-with-dots"
-                // customButtonGroup={<CustomButtonGroupAsArrows />}
-                // dotListClass=""
-                // draggable
-                // focusOnSelect={false}
-                // infinite={false}
-                // infinite
-                // itemClass=""
-                // keyBoardControl
-                // minimumTouchDrag={80}
-                // renderButtonGroupOutside
-                // renderDotsOutside={false}
-                // responsive={{
-                //   desktop: {
-                //     breakpoint: {
-                //       max: 3000,
-                //       min: 1024
-                //     },
-                //     items: 3,
-                //     partialVisibilityGutter: 40
-                //   },
-                //   mobile: {
-                //     breakpoint: {
-                //       max: 464,
-                //       min: 0
-                //     },
-                //     items: 1,
-                //     partialVisibilityGutter: 30
-                //   },
-                //   tablet: {
-                //     breakpoint: {
-                //       max: 1024,
-                //       min: 464
-                //     },
-                //     items: 2,
-                //     partialVisibilityGutter: 30
-                //   }
-                // }}
-                // showDots
-                // sliderClass=""
-                // slidesToSlide={1}
-                // swipeable
-
-                // End Test
-
-                // additionalTransfrom={0}
-                // // arrows
-                // arrows={false}
-                // autoPlay
-                // autoPlaySpeed={3000}
-                // centerMode={false}
-                // className=""
-                // containerClass="container-with-dots"
-                // dotListClass=""
-                // draggable
-                // focusOnSelect={false}
-                // infinite
-                // itemClass=""
-                // keyBoardControl
-                // minimumTouchDrag={80}
-                // renderButtonGroupOutside={false}
-                // renderDotsOutside={false}
-                // responsive={{
-                //     desktop: {
-                //     breakpoint: {
-                //         max: 3000,
-                //         min: 1024
-                //     },
-                //     items: 3,
-                //     partialVisibilityGutter: 40
-                //     },
-                //     mobile: {
-                //     breakpoint: {
-                //         max: 464,
-                //         min: 0
-                //     },
-                //     items: 1,
-                //     partialVisibilityGutter: 30
-                //     },
-                //     tablet: {
-                //     breakpoint: {
-                //         max: 1024,
-                //         min: 464
-                //     },
-                //     items: 2,
-                //     partialVisibilityGutter: 30
-                //     }
-                // }}
-                // showDots
-                // sliderClass=""
-                // slidesToSlide={2}
-                // swipeable
-
                 // End point
                 additionalTransfrom={0}
                 arrows={false}
-                autoPlaySpeed={3000}
+                autoPlay
+                autoPlaySpeed={5000}
                 centerMode={false}
                 className=""
                 containerClass="container"
@@ -160,21 +59,21 @@ const Testimonials = () => {
                     items: 1
                     }
                 }}
-                showDots
+                showDots={false}
                 sliderClass=""
                 slidesToSlide={1}
                 swipeable
             >
                {
-                   clientReviews.length > 0 
-                   && clientReviews.map((clientReview) => <WithStyles key={clientReview._id} review={clientReview}/>)
+                   clients.length > 0 
+                   && clients.map((client) => <WithStyles key={client._id} client={client}/>)
                 //    clientReviews.length > 0 
                 //    && clientReviews.map((clientReview) => <WithStyles key={clientReview._id} review={clientReview}/>)
                }
                
             </Carousel>
             {
-                clientReviews.length < 1 && <div className="d-flex justify-content-center w-100 mx-auto text-center">
+                clients.length < 1 && <div className="d-flex justify-content-center w-100 mx-auto align-items-center my-5 text-center">
                     <CircularProgress color="secondary" />
                 </div>
             }

@@ -10,7 +10,7 @@ const Home = () => {
                 <div style={{fontSize: '28px'}} className="px-2 my-auto my-2 typeWriting"><small className="my-0 py-0 font-weight-bold text-warning ">
                     <Typewriter
                         options={{
-                            strings: ["A Web Designer,","A Web Programer,",'& A Mern Stack Developer'],
+                            strings: ["A Web Designer,","A Web Programer,",'& A MERN Stack Developer'],
                             autoStart: true,
                             loop: true,
                         }}

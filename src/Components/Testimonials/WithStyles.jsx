@@ -2,17 +2,17 @@ import React from 'react';
 import star from '../../images/icon/star.png';
 import { BsFillStarFill } from "react-icons/bs";
 import { FaQuoteRight } from "react-icons/fa";
-const WithStyles = ({review}) => {
+const WithStyles = ({client}) => {
     
-    const {name, img, description, company} = review;
+    const {name, img, description, company} = client;
     return (
-        <div style={{width: '700px'}} className="my-5 mx-auto withStyle">
+        <div  className="my-5 withStyle text-center">
             <h1 className="brand-color text-center"><FaQuoteRight/></h1>
-            <div className="bg-transparent text-center p-3">
-                <div style={{width: '280px'}} className="des  mx-auto">
-                    <p style={{fontSize: '17px'}} className="text-justify my-4 rounded client-description text-light"><>{description}</></p>
+                <div className="des mt-4 text-justify mx-auto">
+                    <p style={{color: 'thistle'}} className=" client-description text-light"><small>{description}</small></p>
                 </div>
-                <img style={{height: '80px',width: '80px',clipPath: "circle(53.9% at 50% 50%)"}} className="img-fluid mx-auto " src={img} alt=""/>
+            <div className="my-3">
+                <img style={{height: '80px',width: '80px',clipPath: "circle(53.9% at 50% 50%)"}} className="img-fluid mx-auto" src={img} alt=""/>
                 <div className="text-dark mx-auto text-center mt-4">
                     <h6 className="text-light">{name}</h6>
                     <p className="text-light"><small style={{color: '#9a4dce'}}>{company}</small></p>

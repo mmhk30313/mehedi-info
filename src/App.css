@@ -3,10 +3,13 @@ body{
   margin: 0;
   box-sizing: border-box;
 }
-.client-description{
+.des{
   overflow: scroll;
+  height: 200px;
+  width: 75%;
+  
 }
-body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
+body::-webkit-scrollbar, .des::-webkit-scrollbar{
   display: none;
 }
 .App {
@@ -91,6 +94,10 @@ body::-webkit-scrollbar, .client-description::-webkit-scrollbar{
 }
 #down{
   width: 30px;
+}
+
+.card{
+  cursor: pointer;
 }
 @keyframes float{
   0% { transform: translate(0,  0); }
