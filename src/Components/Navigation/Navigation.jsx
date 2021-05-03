@@ -14,25 +14,24 @@ const Navigation = () => {
     const openNav = () => {
         // console.log("open")
         setOpen(true);
-        document.getElementById('name1').style.display = "none";
-        // document.getElementById('name2').style.display = "block";
-        document.getElementById("sideBar-mobile").style.width = "170px";
         document.getElementById("sideBar-mobile").style.borderRight = "0.1px solid rgb(150, 149, 149)";  
-        document.getElementById("sideBar-mobile").style.transition = "0.8s";
-        document.getElementById('topBar').style.marginLeft = "170px";
-        document.getElementById("main-mobile").style.marginLeft = "170px";
+        
+        document.getElementById("sideBar-mobile").style.transform = "translateX(0)";
+        document.getElementById('topBar').style.transform = "translateX(170px)";
+        document.getElementById("main-mobile").style.opacity = "0.4";
+        document.getElementById("main-mobile").style.transform = "translateX(170px)";
     }
     
     const closeNav = () =>{
         // console.log("close")
         setOpen(false);
-        document.getElementById('name1').style.display = "block";
-        // document.getElementById('name2').style.display = "none";
-        document.getElementById("sideBar-mobile").style.width = "0";
-        document.getElementById("sideBar-mobile").style.transition = "0.8s";
+        
+        document.getElementById("sideBar-mobile").style.transform = "translateX(-170px)";
         document.getElementById("sideBar-mobile").style.borderRight = "none";
-        document.getElementById('topBar').style.marginLeft = "0";
-        document.getElementById("main-mobile").style.marginLeft= "0";
+        document.getElementById('topBar').style.transform = "translateX(0)";
+        document.getElementById("main-mobile").style.transform = "translateX(0)";
+        document.getElementById("main-mobile").style.opacity = "1";
+        document.getElementById("main-mobile").style.margin= "0 auto";
     }
     const setOpenNav = (flag) => {
         setOpen(flag);
@@ -47,13 +46,10 @@ const Navigation = () => {
         <div className="w-100 all-section">
             <div id="topBar" className="mobile App fixed-top border-bottom border-dark">
                 <div className="d-flex">
-                    {/* <button id="cross" className={`bg-transparent btn btn-dark mr-1 rounded-circle text-light mr-1`} onClick={() => setOpenNav(!open)}>☰</button>  */}
                     <h2 className={`App border-none outline-none my-auto text-light mr-1`} onClick={() => setOpenNav(!open)}><MdSort/></h2> 
-                    {/* <h5 className={`App border-none outline-none my-auto text-light mr-1`} onClick={() => setOpenNav(!open)}>☰</h5>  */}
                     <img style={{height: '60px'}} className="img-fluid ml-3 rounded-circle" src={mahadi} alt="MMHK"/>
-                    <h6 id="name1" className='text-light font-weight-bold my-auto ml-2'>MEHEDI HASAN</h6>
+                    <h5 style={{fontSize: '20px'}} id="name-top" className='text-light font-weight-bold my-auto ml-2'>MEHEDI HASAN</h5>
                 </div>
-                {/* <h6 id="name2" className='text-light font-weight-bold mt-3'>MEHEDI HASAN</h6> */}
             </div>
 
             <div id="sideBar-mobile" className="sidebar-mobile text-center border-right border-dark">

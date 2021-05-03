@@ -9,7 +9,7 @@ const Projects = () => {
     const [active, setActive] = useState('everything');
     const [loggedInUser, setLoggedInUser, allProjects] = useContext(UserContext);
     const [projects, setProjects] = useState(allProjects);
-    console.log(allProjects)
+    // console.log(allProjects)
     useEffect(()=>{
         let newProjects = [];
         const curProjects = [...allProjects];

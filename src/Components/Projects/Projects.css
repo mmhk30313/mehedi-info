@@ -140,3 +140,27 @@
         transform: rotateY(0deg);
     }
 }
+
+.project-card, .blog-card{
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.learn-more, .read{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: hsla(276, 57%, 55%, 0.678);
+    transition: 0.5s;
+    transform: translate(0, 100%);
+}
+
+
+.project-card:hover .learn-more, .blog-card:hover .read{
+    transform: translate(0, 0);
+}

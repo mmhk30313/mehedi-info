@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,900&family=Girassol&family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,900&family=Girassol&family=Goblin+One&family=Rajdhani&display=swap');
 .home{
     height: 100vh;
     padding: 180px 0 0 0;
 }
+.hello{
+    font-size: 65px;
+    font-weight: 900;
+    font-family: 'Goblin One', cursive;
+}
+.typeWriting{
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(177, 173, 165);
+    /* height: 40px; */
+}
+.name, #name-top{
+    font-size: 30px;
+    font-family: 'Rajdhani', sans-serif;
+}
 
 .info{
     width: 450px;
+    font-family: 'Rajdhani', sans-serif;
 }
 @media(max-width: 1025px){
     .home{
@@ -13,11 +30,16 @@
     }
 }
 @media (max-width: 769px){
+    .hello{
+        font-size: 30px;
+        /* font-weight: 900; */
+    }
     .home{
         height: fit-content;
         padding: 120px 0 50px 0 !important;
     }
     .info{
+        display: none;
         width: fit-content;
         height: fit-content;
         overflow: scroll;
@@ -26,10 +48,12 @@
         overflow: scroll;
     }
     .name{
-        height: 46px;
+        font-size: 18px;
+        /* height: 46px; */
     }
     .typeWriting{
-        height: 60px;
+        font-size: 28px;
+        /* height: 60px; */
     }
     /* @media only screen and (max-width: 140px) {
     } */
@@ -41,4 +65,50 @@
         /* margin: 5px; */
         font-size: 14px;
     }
+}
+
+.resume{
+    background-color: #9A4DCE !important;
+    border: 1px solid #9A4DCE;
+    font-size: 18px !important;
+
+}
+.resume, .hire-me{
+    position: relative;
+    overflow: hidden !important;
+}
+.hire-me{
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    /* height: 43.4px; */
+}
+.hire-me .content{
+    font-size: 18px;
+}
+.content{
+    position: relative;
+    transition: all 0.7s ease-in-out;
+}
+.resume-design, .hire-me-design{
+    position: absolute;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transform: translate(0, 100%);
+}
+.resume-design{
+    background-color: #111111;
+}
+.hire-me-design{
+    background-color: #ffffff;
+}
+.hire-me:hover .content, .resume:hover .content{
+    z-index: 10 !important;
+    color: #9A4DCE !important;
+}
+.resume:hover .resume-design, .hire-me:hover .hire-me-design{
+    transform: translate(0, 0);
 }

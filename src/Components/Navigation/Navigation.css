@@ -21,3 +21,10 @@
         width: 20px !important;
     }
 }
+#sideBar-mobile, #main-mobile, #topBar{
+    transition: 0.8s;
+}
+#sideBar-mobile{
+    width: 170px;
+    transform: translateX(-170px) ;
+}

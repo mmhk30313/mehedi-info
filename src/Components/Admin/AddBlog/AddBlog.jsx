@@ -101,8 +101,6 @@ function MyVerticallyCenteredModal(props) {
           <div className="row justify-content-around align-items-center mx-auto">
               <div className="details col-md-8 align-items-center">
                   <h5><span className="text-info">Blog Name:</span> {addedBlog.blogName}</h5>
-                  {/* <h6>Type: <span className="text-warning"> {addedBlog.projectType}</span></h6> */}
-                  {/* <p className="text-success font-weight-bold">Description: {addedProject.description}</p> */}
               </div>
               <div className="image col-md-4 text-right">
                   <img className="img-fluid w-" src={addedBlog.imgUrl} alt=""/>

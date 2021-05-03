@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import WhatsAppWidget from 'react-whatsapp-widget';
+// import WhatsAppWidget from 'react-whatsapp-widget';
 import Navigation from './Components/Navigation/Navigation';
 // import 'react-whatsapp-widget/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Admin from './Components/Admin/Admin';
 import { useEffect } from 'react';
 import Client from './Components/Client/Client';
+// import MyNav from './Components/MyNav/MyNav';
 AOS.init();
 export const UserContext = createContext();
 function App() {
@@ -55,13 +56,14 @@ function App() {
       })
 
     }, []);
-    console.log(allProjects);
+    // console.log(allProjects);
     return (
     <div className="App text-light">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser, allProjects, setAllProjects, blogs, setBlogs, admins, setAdmins, clients, setClients]}>
         <Router>
           <Switch>
             <Route exact path="/">
+              {/* <MyNav/> */}
               <Navigation/>
             </Route>
             <Route path="/login">
@@ -79,7 +81,9 @@ function App() {
           </Switch>
         </Router>
       </UserContext.Provider>
-      <MessengerCustomerChat pageId="109101847984556" appId="481173423298646" />
+      <div className="bg-warning">
+        <MessengerCustomerChat pageId="109101847984556" appId="481173423298646" />
+      </div>
       {/* <WhatsAppWidget textReplyTime='Typically replies within a day' phoneNumber='+8801521108858' companyName="Md. Mehedi Hasan Khan" message="Hello! 👋🏼 What can I do for you?" sendButton="Send" /> */}
     </div>
   );

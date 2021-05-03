@@ -21,3 +21,8 @@
         padding: 0 !important;
     }
 }
+.contact p{
+    color: rgb(196, 187, 171);
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}

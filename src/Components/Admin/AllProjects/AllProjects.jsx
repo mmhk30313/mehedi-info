@@ -20,7 +20,7 @@ const AllProjects = () => {
         })
         .catch(err => console.log(err, loggedInUser, setLoggedInUser))
     },[])
-    // console.log(allProjects)
+    console.log(allProjects)
     const handleStatusChange = (id)=>{
         const statusId = document.getElementById(`status-${id}`);
         console.log(id+" => "+ statusId.value);

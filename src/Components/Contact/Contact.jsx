@@ -41,7 +41,7 @@ const Contact = () => {
         <div  className="container py-5 contact">
             <h3 className="font-weight-bold header mt-4 py-3">CONTACT</h3>
             
-            <p className="header pb-3">Let us handle your project, professionally</p>
+            <p className="pb-3">Let us handle your project, professionally</p>
             <form onSubmit={handleSubmit} className="bg-transparent home-form">
                 <div className="row justify-content-center">
                     <div className="col-md-6 form-group">
@@ -60,7 +60,13 @@ const Contact = () => {
                         <textarea type="text" cols='15' rows="5" name="message" placeholder="Your Message" className="form-control" required/>
                     </div>
                     <div className="container form-group w-100 d-flex justify-content-center">
-                        <button type="submit" className="w-100 mx-auto btn btn-outline-warning" value="">Send Message</button>
+                        <button type="submit" className="my-1  btn resume px-4 w-100 mx-auto btn">
+                            <span className='content font-weight-bold text-light'>
+                                Send Message
+                            </span>
+                            <span className="resume-design pt-1"></span> 
+                        </button>
+                        {/* <button  className="w-100 mx-auto btn btn-outline-warning" value=""></button> */}
                     </div>
                 </div>
             </form>
