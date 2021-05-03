@@ -10,6 +10,8 @@
     font-family: 'Goblin One', cursive;
 }
 .typeWriting{
+    font-size: 38px;
+    /* font-family: 'Goblin One', cursive; */
     font-family: 'Rajdhani', sans-serif;
     color: rgb(177, 173, 165);
     /* height: 40px; */
@@ -18,7 +20,9 @@
     font-size: 30px;
     font-family: 'Rajdhani', sans-serif;
 }
-
+.name{
+    font-size: 24px;
+}
 .info{
     width: 450px;
     font-family: 'Rajdhani', sans-serif;

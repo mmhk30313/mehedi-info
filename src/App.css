@@ -94,6 +94,8 @@ body::-webkit-scrollbar, .des::-webkit-scrollbar{
 }
 #down{
   width: 30px;
+  border: 1px solid #9A4DCE !important;
+  color: #9A4DCE !important;
 }
 
 .card{

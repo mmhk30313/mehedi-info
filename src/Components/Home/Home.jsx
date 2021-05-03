@@ -17,7 +17,8 @@ const Home = () => {
                     />
                 </small></div>
                 <p className="text-justify info px-2 "><small>
-                    I've designed some real life web applications in html, css & bootstrap and developed some frontend web applications adding JavaScript using <span className="text-warning"> Rest API</span> and  some full stack web applications of homepages, landing pages, social media, blogs, portfolio & e-commerce website. I've good experience of developing any <span className="text-warning"> responsive website</span> on desktop, tab & mobile views.  
+                    My first priority is to design and develop attractive, responsive device friendly and user friendly websites ( landing pages, social media, blogs, portfolio & e-commerce ) for you. 
+                    {/* I've designed some real life web applications in html, css & bootstrap and developed some frontend web applications adding JavaScript using <span className="text-warning"> Rest API</span> and  some full stack web applications of homepages, landing pages, social media, blogs, portfolio & e-commerce website. I've good experience of developing any <span className="text-warning"> responsive website</span> on desktop, tab & mobile views.   */}
                 </small></p>
                 <div style={{height: '120px'}} className="row mx-auto">
                     <div className="col-md-4">
@@ -42,7 +43,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div id="contact-desktop" className="col-md-8 d-flex justify-content-center ">
-                        <a id="down" href="#about-1" style={{height: '50px'}} className="my-3 mx-auto  rounded border border-primary text-decoration-none" rel="noreferrer" ><p className="down">.</p></a>
+                        <a id="down" href="#about-1" style={{height: '50px'}} className="my-3 mx-auto rounded border border-primary text-decoration-none" rel="noreferrer" ><p className="down">.</p></a>
                     </div>
                     {/* <div id="contact-mobile" className="col-md-8 d-flex justify-content-center">
                         <a href="#about-2" style={{width: 'fit-content'}} className="my-1 mx-auto btn btn-outline-warning" rel="noreferrer" ><span className="down">.</span></a>
