@@ -22,9 +22,14 @@
     }
 }
 #sideBar-mobile, #main-mobile, #topBar{
-    transition: 0.8s;
+    transition: 0.8s !important;
 }
 #sideBar-mobile{
-    width: 170px;
-    transform: translateX(-170px) ;
+    width: 200px;
+    transform: translateX(-200px) ;
+}
+
+.name-side, .footer-des{
+    font-weight: 900;
+    font-family: 'Rajdhani', sans-serif;
 }

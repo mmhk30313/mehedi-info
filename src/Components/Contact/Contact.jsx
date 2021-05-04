@@ -38,10 +38,9 @@ const Contact = () => {
         evt.target.reset()
     }
     return (
-        <div  className="container py-5 contact">
+        <div className="position-relative container py-5 contact">
             <h3 className="font-weight-bold header mt-4 py-3">CONTACT</h3>
-            
-            <p className="pb-3">Let us handle your project, professionally</p>
+            <p style={{color: 'thistle'}} className="pb-3">Let us handle your project, professionally</p>
             <form onSubmit={handleSubmit} className="bg-transparent home-form">
                 <div className="row justify-content-center">
                     <div className="col-md-6 form-group">
@@ -62,7 +61,7 @@ const Contact = () => {
                     <div className="container form-group w-100 d-flex justify-content-center">
                         <button type="submit" className="my-1  btn resume px-4 w-100 mx-auto btn">
                             <span className='content font-weight-bold text-light'>
-                                Send Message
+                                SEND EMAIL
                             </span>
                             <span className="resume-design pt-1"></span> 
                         </button>
@@ -70,6 +69,7 @@ const Contact = () => {
                     </div>
                 </div>
             </form>
+            <a href="#home-1" className="text-decoration-none text-light" rel="noreferrer"><div className="scroll-up"></div></a>
             <MyVerticallyCenteredModal
                 user={user}
                 show={modalShow}

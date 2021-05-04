@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CircularProgress } from '@material-ui/core';
 import { useEffect } from 'react'
 import { useContext } from 'react';
 import { UserContext } from '../../../App';
 const AllProjects = () => {
     const [loggedInUser, setLoggedInUser, allProjects, setAllProjects] = useContext((UserContext));
+    const [status, setStatus] = useState("");
     useEffect(() =>{
+        console.log(status);
         fetch("https://my-all-works-server.herokuapp.com/all-projects")
         .then(res => res.json())
         .then(data =>{
+            console.log(status);
             // console.log(data);
             const curData = data.filter(d => d.projectType !== "Ongoing");
             const onGoingData = data.filter(d => d.projectType === "Ongoing");
@@ -19,11 +22,12 @@ const AllProjects = () => {
             // setAllProjects(data);
         })
         .catch(err => console.log(err, loggedInUser, setLoggedInUser))
-    },[])
-    console.log(allProjects)
+    },[status])
+    // console.log(allProjects)
     const handleStatusChange = (id)=>{
         const statusId = document.getElementById(`status-${id}`);
-        console.log(id+" => "+ statusId.value);
+        // console.log(id+" => "+ statusId.value);
+        setStatus(statusId.value);
         statusId.classList.remove(...statusId.classList);
         statusId.classList.add("bg-"+statusId.value, "border-none", "form-select", "form-select-lg", "p-2", "rounded");
         fetch(`https://my-all-works-server.herokuapp.com/update-project-status/${id}`, {

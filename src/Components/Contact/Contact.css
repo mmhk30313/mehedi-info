@@ -1,7 +1,7 @@
 .home-form input:focus, .home-form textarea:focus{
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: thistle;
+    border: 1px solid thistle;
 }
 .home-form input, .home-form textarea{
     background-color: transparent;
@@ -20,9 +20,15 @@
         height: fit-content !important;
         padding: 0 !important;
     }
+    .contact p{
+        text-align: center;
+    }
 }
 .contact p{
-    color: rgb(196, 187, 171);
-    text-align: center;
+    color: thistle;
     font-family: 'Rajdhani', sans-serif;
+}
+
+.home-form input::-webkit-input-placeholder, .home-form textarea::-webkit-input-placeholder{
+    color: thistle;
 }

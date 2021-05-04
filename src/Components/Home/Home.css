@@ -13,11 +13,13 @@
     font-size: 38px;
     /* font-family: 'Goblin One', cursive; */
     font-family: 'Rajdhani', sans-serif;
-    color: rgb(177, 173, 165);
+    /* color: rgb(177, 173, 165); */
+    color: thistle;
     /* height: 40px; */
 }
-.name, #name-top{
-    font-size: 30px;
+.name,#name-top{
+    letter-spacing: 2px;
+    font-size: 34px;
     font-family: 'Rajdhani', sans-serif;
 }
 .name{
@@ -43,7 +45,7 @@
         padding: 120px 0 50px 0 !important;
     }
     .info{
-        display: none;
+        /* display: none; */
         width: fit-content;
         height: fit-content;
         overflow: scroll;

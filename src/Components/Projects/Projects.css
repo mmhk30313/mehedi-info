@@ -51,7 +51,7 @@
     }
     .projects .btn{
         margin-top: 10px;
-        font-size: 10px;
+        font-size: 14px;
     }
     
     #mobile-items{
@@ -148,18 +148,24 @@
     position: relative;
 }
 
-.learn-more, .read{
+.learn-more, .read, .on-going{
     position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
     bottom: 0;
     z-index: 1;
-    background-color: hsla(276, 57%, 55%, 0.678);
     transition: 0.5s;
-    transform: translate(0, 100%);
 }
 
+.on-going{
+    background-color: #9a4bceda;
+}
+
+.read, .learn-more{
+    transform: translate(0, 100%);
+    background-color: #994bcead;
+}
 
 .project-card:hover .learn-more, .blog-card:hover .read{
     transform: translate(0, 0);

@@ -12,8 +12,8 @@
     color: #9a4dce;
 }
 .skills-title{
-    font-family: Garamond, serif;
-    font-weight: bolder;
+    /* font-family: Garamond, serif; */
+    font-family: 'Hind Guntur', sans-serif;
     font-size: 26px;
 }
 .about-des{
@@ -40,13 +40,13 @@
 .responsive::-webkit-scrollbar, .fast::-webkit-scrollbar, .dynamic::-webkit-scrollbar{
     display: none;
 } */
-.about-des{
+/* .about-des{
     height: 80px;
     overflow: scroll;
-}
-.about-des::-webkit-scrollbar{
+} */
+/* .about-des::-webkit-scrollbar{
     display: none;
-}
+} */
 .about-experience .card .title{
     font-family: Garamond, serif;
     font-size: 28px;

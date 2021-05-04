@@ -18,7 +18,7 @@ const Login = () => {
     const [allAdmin, setAllAdmin] = useState([]);
     const path = location.state.from.pathname;
 
-    console.log(path);
+    // console.log(path);
     useEffect(() => {
         fetch(`https://my-all-works-server.herokuapp.com/admins`)
         .then(res => res.json())

@@ -16,7 +16,7 @@ const Testimonials = () => {
     },[])
     // console.log(clientReviews);
     return (
-        <div style={{height: ''}} className="container py-5 ">
+        <div style={{height: ''}} className="container py-5">
             <h3 className='font-weight-bold mt-4  header'>TESTIMONIALS</h3>
             <Carousel
                 // End point

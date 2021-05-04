@@ -100,7 +100,7 @@ const About = () => {
                         
                     ].map(skill => <div key={skill._id} className="col-md-6">
                         <div style={{height: '110px'}} className="card bg-transparent py-2 skill">
-                            <div className="text-warning d-flex justify-content-between">
+                            <div style={{color: "thistle"}} className="d-flex justify-content-between">
                                 <p style={{fontSize: '14px'}}>{skill.name}</p>
                                 <p style={{fontSize: '14px'}}>{skill.percent}{"%"}</p>
                             </div>
@@ -112,60 +112,6 @@ const About = () => {
                     </div>)
                 }
             </div>
-
-            {/* <div className="row">
-                {
-                    [
-                        {
-                            _id: 1,
-                            name: "HTML",
-                            percent: 100,
-                            img: ""
-                        },
-                        {
-                            _id: 2,
-                            name: "CSS",
-                            percent: 100,
-                            img: ""
-                        },
-                        {
-                            _id: 3,
-                            name: "ReactJS",
-                            percent: 90,
-                            img: ""
-                        },
-                        {
-                            _id: 4,
-                            name: "JavaScript",
-                            percent: 85,
-                            img: ""
-                        },
-                        {
-                            _id: 5,
-                            name: "NodeJS",
-                            percent: 80,
-                            img: "" 
-                        },
-                        {
-                            _id: 6,
-                            name: "C/C++",
-                            percent: 75,
-                            img: ""
-                        }
-                        
-                    ].map(skill => <div className="col-md-6">
-                        <div className="card bg-transparent py-3">
-                            <div className="text-warning d-flex justify-content-between">
-                                <p style={{fontSize: '14px'}}>{skill.name}</p>
-                                <p style={{fontSize: '14px'}}>{skill.percent}{"%"}</p>
-                            </div>
-                            <div style={{height: '5px'}} className="progress">
-                                <div className={`progress-bar  progress-bar-striped" role="progressbar `} style={{width: skill.percent+"%"}} aria-valuenow={skill.percent} aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>)
-                }
-            </div> */}
         </div>
     );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
-import star from '../../images/icon/star.png';
-import { BsFillStarFill } from "react-icons/bs";
+// import star from '../../images/icon/star.png';
+// import { BsFillStarFill } from "react-icons/bs";
 import { FaQuoteRight } from "react-icons/fa";
 const WithStyles = ({client}) => {
     
     const {name, img, description, company} = client;
     return (
-        <div  className="my-5 withStyle text-center">
+        <div  className="my-5 withStyle text-center mr-4">
             <h1 className="brand-color text-center"><FaQuoteRight/></h1>
                 <div className="des mt-4 text-justify mx-auto">
                     <p style={{color: 'thistle'}} className=" client-description text-light"><small>{description}</small></p>

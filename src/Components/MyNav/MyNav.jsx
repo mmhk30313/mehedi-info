@@ -16,13 +16,13 @@ const MyNav = () => {
         setOpen(true);
         // document.getElementById('name1').style.display = "none";
         // document.getElementById('name2').style.display = "block";
-        document.getElementById("left-mobile").style.width = "170px";
+        document.getElementById("left-mobile").style.width = "200px";
         // document.getElementById("left-mobile").style.borderRight = "0.1px solid rgb(150, 149, 149)";  
         document.getElementById("left-mobile").style.transition = "0.8s";
-        document.getElementById('top-mobile').style.marginLeft = "170px";
+        document.getElementById('top-mobile').style.marginLeft = "200px";
         document.getElementById("mobile-right").style.transition = "0.8s";
-        document.getElementById("mobile-right").style.marginLeft = "170px";
-        // document.getElementById("right-mobile").style.marginLeft = "170px";
+        document.getElementById("mobile-right").style.marginLeft = "200px";
+        // document.getElementById("right-mobile").style.marginLeft = "200px";
     }
     
     const closeNav = () =>{
