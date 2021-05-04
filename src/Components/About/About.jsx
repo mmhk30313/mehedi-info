@@ -5,6 +5,7 @@ import { BsStopwatch } from 'react-icons/bs';
 import SkillBar from 'react-skillbars';
 // import ProgressBar from '../ProgressBar/ProgressBar';
 import './About.css';
+import MyTagCloud from './MyTagCloud';
 const colors = {
     "bar": "#9a4dce",
     "title": {
@@ -112,6 +113,7 @@ const About = () => {
                     </div>)
                 }
             </div>
+            <MyTagCloud/>
         </div>
     );
 };

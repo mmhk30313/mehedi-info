@@ -67,3 +67,18 @@
         margin-top: 35px;
     }
 }
+
+/* Tools & Technologies */
+
+@keyframes blinkingText{
+	0%{		color: thistle;	opacity: 0.4;}
+	/* 49%{	color: transparent;border: transparent;	} */
+	50%{	color: transparent; border-opacity: 0.5;	}
+	/* 99%{	color:transparent;border: transparent;	} */
+	100%{	color: thistle;	opacity: 1;}
+}
+.text-cloud{
+    font-family: rajtai;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+}
