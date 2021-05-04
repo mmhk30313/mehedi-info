@@ -97,7 +97,7 @@ body::-webkit-scrollbar, .des::-webkit-scrollbar{
     /* margin-top: 160px; */
     margin-left: 0;
   }
-  .sidebar-desktop, #main-desktop, #contact-desktop, .scroll-down{
+  .sidebar-desktop, #main-desktop, #contact-desktop, .scroll-down, .scroll-up{
     display: none !important;
   }
   #contact-mobile{
