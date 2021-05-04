@@ -26,9 +26,12 @@ const data = [
 
 const MyTagCloud = () => {
     return (
-        <div  className="d-flex justify-content-center font-weight-light text-cloud mx-auto mt-4">
-            <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
-        </div>
+        <>
+          <p className="tools">TOOLS & TECHNOLOGY</p>
+          <div data-aos="fada-up" data-duration="1500s"  className="d-flex justify-content-center font-weight-light text-cloud mx-auto mt-4">
+              <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
+          </div>
+        </>
     );
 };
 
